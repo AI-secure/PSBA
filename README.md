@@ -12,11 +12,11 @@ Boundary Blackbox Attack requires only decision labels to perform adversarial at
 
 In this paper, we theoretically show that there actually exist a trade-off between the projected length of the true gradient on subspace(the brown item) and the dimensionality of the projection subspace (purple item).
 
-![projection](imgs\projection.png)
+![projection](https://github.com/AI-secure/PSBA/blob/master/imgs%5Cprojection.png)
 
 Based on this interesting finding, we propose *Progressive-Scale based projective Boundary Attack (PSBA)* via progressively searching for the optimal scale in a self-adaptive way under spatial, frequency, and spectrum scales. The image below just shows how we progressively search the optimal projection subspace on the spatial domain, and then attack the target models with this optimal scale.
 
-![progressive_attack](imgs\progressive_attack.png)
+![progressive_attack](https://github.com/AI-secure/PSBA/blob/master/imgs%5Cprogressive_attack.png)
 
 ## Environment Requirements ##
 
