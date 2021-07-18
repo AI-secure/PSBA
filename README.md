@@ -1,6 +1,25 @@
 ## Progressive-Scale Boundary Blackbox Attack via Projective Gradient Estimation
 
+This repository contains the official code for the ICML 2021 paper:
+
+["Progressive-Scale Boundary Blackbox Attack via Projective Gradient Estimation".](https://arxiv.org/abs/2106.06056)
+
+Jiawei Zhang\*, Linyi Li\*, Huichen Li, Xiaolu Zhang, Shuang Yang, Bo Li
+
+## Motivation
+
+Boundary Blackbox Attack requires only decision labels to perform adversarial attacks, where query efficiency directly determines the attack efficiency. Therefore, how we estimate the gradient on the current boundary is a crucial step in this series of work.
+
+In this paper, we theoretically show that there actually exist a trade-off between the projected length of the true gradient on subspace(the brown item) and the dimensionality of the projection subspace (purple item).
+
+![projection](imgs\projection.png)
+
+Based on this interesting finding, we propose *Progressive-Scale based projective Boundary Attack (PSBA)* via progressively searching for the optimal scale in a self-adaptive way under spatial, frequency, and spectrum scales. The image below just shows how we progressively search the optimal projection subspace on the spatial domain, and then attack the target models with this optimal scale.
+
+![progressive_attack](imgs\progressive_attack.png)
+
 ## Environment Requirements ##
+
 * GPU access (The pretrained models are on CUDA. Need extra modification to the code if no CUDA is available.)
 * Python 3.5.2 (Python 3 should work in general.)
 * PyTorch 1.5.1
@@ -127,5 +146,3 @@ First we need both target and reference models.
 + if you want to deliberately ajust the sensitivity then you need to comment off the code between line 761-767
 
 `src/foolbox/attacks/bapp_custom.py`
-
-# PSBA
